@@ -1,0 +1,30 @@
+.QuestExplanation-Button {
+    width: 27%;
+    height: 93%;
+    background-image: url('project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Button/Btn_MainButton_Green.Png?fileID=21300000&guid=cb37917483ee24fea8fab306393441e5&type=3#Btn_MainButton_Green');
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    background-color: rgba(188, 188, 188, 0);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 50px;
+    flex-shrink: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.QuestExplanation-Button.off {
+    -unity-background-image-tint-color: rgb(101, 101, 101);
+}
+
+.QuestRunning {
+    display: none;
+}

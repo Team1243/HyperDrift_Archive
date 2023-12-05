@@ -1,0 +1,142 @@
+.iconLock--active {
+    width: 800px;
+    flex-shrink: 0;
+    height: 800px;
+}
+
+.lock--active > .iconLock--active {
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Icon_PictoIcons(x2)/512/Pictoicon_Lock.Png?fileID=21300000&guid=58866e9efb6f34742a31ca1dbb61af69&type=3#Pictoicon_Lock');
+}
+
+.lock--active {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.leftButton:active {
+    translate: -50px 0;
+    scale: 1.2 1.2;
+    -unity-background-image-tint-color: rgb(255, 255, 0);
+    transition-property: scale;
+    transition-timing-function: ease-in-back;
+    transition-duration: 0.3s;
+}
+
+.rightButton:active {
+    translate: 50px 0;
+    scale: 1.2 1.2;
+    -unity-background-image-tint-color: rgb(255, 255, 0);
+    transition-property: scale;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-back;
+}
+
+.slelectButton {
+    width: 625px;
+    height: 230px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url('project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Button/Btn_MainButton_Yellow.Png?fileID=21300000&guid=804461bef59b141dba258fc997c8ca15&type=3#Btn_MainButton_Yellow');
+    background-color: rgba(188, 188, 188, 0);
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-bottom: 26px;
+    padding-top: 11px;
+    transition-duration: 0.3s, 0.3s;
+    transition-timing-function: ease-in-back, ease;
+    transition-property: scale, all;
+}
+
+.slelectButton:active {
+    -unity-background-image-tint-color: rgb(123, 123, 123);
+    flex-shrink: 0;
+    scale: 1.1 1.1;
+}
+
+.slelectButton:hover {
+}
+
+.select-icon {
+    background-color: rgba(0, 0, 0, 0);
+    width: 135px;
+    height: 135px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Icon_ItemIcons(x2)/512/Icon_Bag.Png?fileID=21300000&guid=b747431e2d78849d5b5497c88589c3e0&type=3#Icon_Bag');
+}
+
+.select-label {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 110px;
+    -unity-text-align: middle-center;
+}
+
+.lock--active > .select-icon {
+    background-image: url('project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Demo/Demo_ClanFlag/ClanIcon_Symbol_Small2.png?fileID=21300000&guid=0daf4da7abc044e2b9b26b6438bee49a&type=3#ClanIcon_Symbol_Small2');
+}
+
+.slelectButton.lock {
+    background-image: url('project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Button/Btn_MainButton_Gray.Png?fileID=21300000&guid=23d2f9d15f15a43c5bf2c57de1a27879&type=3#Btn_MainButton_Gray');
+}
+
+.carState-container {
+    background-color: rgba(0, 0, 0, 0);
+    flex-shrink: 0;
+    width: 100%;
+    height: 125px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.carState-label {
+    font-size: 60px;
+    position: relative;
+    width: 300px;
+    height: 100%;
+    -unity-text-align: middle-center;
+}
+
+.carState-ProgressBar {
+    width: 850px;
+    position: relative;
+    flex-shrink: 1;
+}
+
+.bottom {
+    background-color: rgba(0, 0, 0, 0);
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25%;
+    align-items: center;
+}
+
+.button-container {
+    background-color: rgba(0, 0, 0, 0);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    bottom: 0;
+    min-height: 300px;
+    max-height: 310px;
+}

@@ -1,0 +1,81 @@
+.menu__Button {
+    flex-basis: 20%;
+    height: 90%;
+    background-image: url('project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Button/Btn_OtherButton_Square01_Blue.png?fileID=21300000&guid=0036322b5b88b4794b6e86458a3c81ce&type=3#Btn_OtherButton_Square01_Blue');
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    color: rgba(27, 27, 27, 0);
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition-property: translate, flex-basis;
+    transition-duration: 0.3s, 0.2s;
+    transition-timing-function: ease-out-back, ease;
+    flex-grow: 1;
+}
+
+.menu__Icon {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Demo/Demo_Icon/Icon_PictoIcon_Bell.png?fileID=21300000&guid=bdcbe28f1d35041b091b566b1f0f7bce&type=3#Icon_PictoIcon_Bell');
+    width: 69px;
+    height: 87px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.menu__Button--active {
+    flex-grow: 1;
+    flex-basis: 23%;
+    height: 92%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-image: url('project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Button/Btn_MainButton_Sky.Png?fileID=21300000&guid=362cdbc283a1c43a7abec33080b04398&type=3#Btn_MainButton_Sky');
+    background-color: rgba(0, 0, 0, 0);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    transition-duration: 0.3s, 0.2s;
+    transition-property: translate, flex-basis;
+    transition-timing-function: ease-in-back, ease;
+    translate: 1px -30px;
+}
+
+.unity-base_filed__label {
+}
+
+.setting-container {
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 70px;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.popup_panel-container {
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    background-color: rgba(0, 0, 0, 0.68);
+}
+
+.popup_panel--disable {
+    scale: 0 0;
+}

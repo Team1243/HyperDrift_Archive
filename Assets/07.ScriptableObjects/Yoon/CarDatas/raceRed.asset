@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9379df72ff394b040820198b1a26f0d2, type: 3}
+  m_Name: raceRed
+  m_EditorClassIdentifier: 
+  CarClass: 4
+  CarName: "\uB808\uC774\uC2A4-\uB808\uB4DC"
+  CarModel: {fileID: 4287262899663257784, guid: 065fbe4bed9df634bafa43b3f906c3b0,
+    type: 3}
+  CarMass: 1
+  Acceleration: 17000
+  TurnSpeed: 10
+  MaxSpeed: 95
+  Price: 50000
+  Fuel: 1500
+  RayDistance: 1.1
+  ColliderRadius: 0.55
+  ColliderCenter: {x: 0, y: 0.55, z: -0.225}
+  IsRock: 0

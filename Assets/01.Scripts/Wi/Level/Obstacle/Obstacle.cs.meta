@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/01.Scripts/Yoon/SystemInPlayer/HeartSystemData.cs.meta
+guid: 3e585ab7c19ac1e4a8eaec24dc580feb
+========
+guid: c20da4f585551fb48a662caf4b0dd0b2
+>>>>>>>> main:Assets/01.Scripts/Wi/Level/Obstacle/Obstacle.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

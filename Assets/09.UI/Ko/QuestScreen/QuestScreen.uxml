@@ -1,0 +1,38 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="QuestContainer" src="project://database/Assets/09.UI/Ko/reference/Quest/QuestContainer.uxml?fileID=9197481963319205126&amp;guid=b144dea3682e97b49a8b9f5b5f4ef071&amp;type=3#QuestContainer" />
+    <Style src="project://database/Assets/09.UI/Ko/common.uss?fileID=7433441132597879392&amp;guid=4e7a549603c2b9542ab080caef3c25c7&amp;type=3#common" />
+    <Style src="project://database/Assets/09.UI/Ko/reference/CustomProgressBar/CustomProgressBar.uss?fileID=7433441132597879392&amp;guid=88dd1caa5d538484bbd4793d44b38aa6&amp;type=3#CustomProgressBar" />
+    <Style src="project://database/Assets/09.UI/Ko/QuestScreen/QuestScreen.uss?fileID=7433441132597879392&amp;guid=b5debde6293a78743a0d40784cb458aa&amp;type=3#QuestScreen" />
+    <Style src="project://database/Assets/09.UI/Ko/home/home.uss?fileID=7433441132597879392&amp;guid=9ae70e6aae3cfa047a1a17242c0a5419&amp;type=3#home" />
+    <ui:VisualElement name="QuestScreen" style="width: 100%; height: 100%; flex-shrink: 0; display: flex; background-image: url(&apos;project://database/Assets/02.Sprites/Ko/backgorund_onrange.png?fileID=21300000&amp;guid=5941a4280e8e5f64894b53a3d8f03be4&amp;type=3#backgorund_onrange&apos;); align-items: center; justify-content: center;">
+        <ui:VisualElement name="VisualElement" style="background-color: rgba(0, 0, 0, 0.53); align-items: center; justify-content: space-between; width: 100%; height: 7%; flex-direction: row; border-bottom-color: rgba(255, 255, 255, 0.55); border-bottom-width: 6px;">
+            <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; align-items: center; justify-content: space-around; width: 100%; height: 100%; padding-left: 2%; padding-right: 2%;">
+                <ui:VisualElement name="goldState-container" style="background-color: rgba(0, 0, 0, 0); flex-shrink: 0; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Demo/Demo_UI/StatusBarFrame_White.png?fileID=21300000&amp;guid=3a057b166165546afb4bab7fbec93a29&amp;type=3#StatusBarFrame_White&apos;); -unity-background-image-tint-color: rgb(72, 0, 0); width: 340px; height: 70px; flex-direction: row; align-items: center; justify-content: center; padding-left: 25px; padding-right: 43px; padding-top: 2px; padding-bottom: 2px;">
+                    <ui:Label tabindex="-1" text="9,999,999" display-tooltip-when-elided="true" name="Quest_goldState-label" class="common__text" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-text-align: middle-center; font-size: 45px;" />
+                    <ui:VisualElement name="goldState-icon" class="menu__Icon" style="background-color: rgba(0, 0, 0, 0); position: absolute; flex-shrink: 0; width: 100px; height: 100px; right: -24px; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Icon_ItemIcons(x2)/256/Icon_Gold.png?fileID=21300000&amp;guid=8a860a365a3ee478c819168fddfc98d7&amp;type=3#Icon_Gold&apos;);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="heartState-container" style="background-color: rgba(0, 0, 0, 0); flex-shrink: 0; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Demo/Demo_UI/StatusBarFrame_White.png?fileID=21300000&amp;guid=3a057b166165546afb4bab7fbec93a29&amp;type=3#StatusBarFrame_White&apos;); -unity-background-image-tint-color: rgb(72, 0, 0); width: 340px; height: 70px; flex-direction: row; align-items: center; justify-content: center; padding-left: 25px; padding-right: 43px; padding-top: 2px; padding-bottom: 2px;">
+                    <ui:Label tabindex="-1" text="9,999,999" display-tooltip-when-elided="true" name="Quest_heartState-label" class="common__text" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-text-align: middle-center; font-size: 45px;" />
+                    <ui:VisualElement name="hearState-icon" class="menu__Icon" style="background-color: rgba(0, 0, 0, 0); position: absolute; flex-shrink: 0; width: 100px; height: 100px; right: -24px; background-image: url(&apos;project://database/Assets/Resources/sprites/Icon_Heart.Png?fileID=21300000&amp;guid=241d29fd13455f945914f0bf7d4a0482&amp;type=3#Icon_Heart&apos;);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Top-container" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; width: 100%; height: 259px; justify-content: space-around; align-items: center;">
+            <ui:VisualElement name="stage-label" style="background-color: rgba(0, 0, 0, 0); flex-shrink: 0; width: 940px; height: 160px; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Label/Label_TitleRibbon_Green.png?fileID=21300000&amp;guid=4f004328d7c9547edae34787869f3e8a&amp;type=3#Label_TitleRibbon_Green&apos;); flex-direction: row; align-items: center; justify-content: space-around; padding-left: 80px; padding-right: 80px; padding-bottom: 27px; padding-top: 9px;">
+                <ui:VisualElement name="map-icon" style="background-color: rgba(0, 0, 0, 0); width: 150px; height: 150px; flex-shrink: 0; -unity-background-scale-mode: scale-to-fit; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Icon_PictoIcons(x2)/256/Pictoicon_Bookmark.Png?fileID=21300000&amp;guid=7409bb81554eb4e829f1392d2adeee2a&amp;type=3#Pictoicon_Bookmark&apos;);" />
+                <ui:Label tabindex="-1" text="퀘스트 모음" display-tooltip-when-elided="true" class="common__text" style="font-size: 82px; -unity-text-align: middle-center;" />
+                <ui:VisualElement name="map-icon" style="background-color: rgba(0, 0, 0, 0); width: 150px; height: 150px; flex-shrink: 0; -unity-background-scale-mode: scale-to-fit; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Icon_PictoIcons(x2)/256/Pictoicon_Bookmark.Png?fileID=21300000&amp;guid=7409bb81554eb4e829f1392d2adeee2a&amp;type=3#Pictoicon_Bookmark&apos;);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Quest-List" style="background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: flex-start; flex-grow: 1; width: 100%; height: 100%;">
+            <ui:Instance template="QuestContainer" name="QuestContainer" class="QuestContainer" style="display: none;" />
+            <ui:Instance template="QuestContainer" name="QuestContainer" class="QuestContainer" style="display: none;" />
+            <ui:Instance template="QuestContainer" name="QuestContainer" class="QuestContainer" style="display: none;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.64); width: 100%; position: absolute; height: 100%; align-items: center; justify-content: center;">
+        <ui:VisualElement name="popup_heart-container" class="popupHeart" style="position: relative; bottom: 0; translate: 0 0;">
+            <ui:Label tabindex="-1" text="시연용 빌드입니다." display-tooltip-when-elided="true" name="popup_heart-label" class="common__text" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-grow: 1; -unity-font-style: normal;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

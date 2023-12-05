@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9379df72ff394b040820198b1a26f0d2, type: 3}
+  m_Name: police
+  m_EditorClassIdentifier: 
+  CarClass: 3
+  CarName: "\uACBD\uCC30\uCC28"
+  CarModel: {fileID: 5735101284618672932, guid: 81eafd306bd15b04aa2233546e5ccf9d,
+    type: 3}
+  CarMass: 1
+  Acceleration: 13000
+  TurnSpeed: 7
+  MaxSpeed: 80
+  Price: 25000
+  Fuel: 1700
+  RayDistance: 1
+  ColliderRadius: 0.6
+  ColliderCenter: {x: 0, y: 0.63, z: 0}
+  IsRock: 0

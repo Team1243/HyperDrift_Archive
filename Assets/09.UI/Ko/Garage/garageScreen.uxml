@@ -1,0 +1,46 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/09.UI/Ko/Garage/garageScreen.uss?fileID=7433441132597879392&amp;guid=04f3e545b5e6f8847932d243b71f7643&amp;type=3#garageScreen" />
+    <Style src="project://database/Assets/09.UI/Ko/common.uss?fileID=7433441132597879392&amp;guid=4e7a549603c2b9542ab080caef3c25c7&amp;type=3#common" />
+    <Style src="project://database/Assets/09.UI/Ko/reference/CustomProgressBar/CustomProgressBar.uss?fileID=7433441132597879392&amp;guid=88dd1caa5d538484bbd4793d44b38aa6&amp;type=3#CustomProgressBar" />
+    <ui:VisualElement name="garage-VisualElement" picking-mode="Ignore" style="width: 100%; height: 100%; flex-shrink: 0; align-items: center; justify-content: space-between; flex-direction: column; transition-duration: 0.3s; visibility: visible; overflow: visible;">
+        <ui:VisualElement name="lock-icon" picking-mode="Ignore" class="iconLock--active" style="top: 47%; position: absolute; display: none;" />
+        <ui:VisualElement name="carState-VisualElement" picking-mode="Ignore" style="width: 97%; height: 800px; flex-shrink: 0; flex-direction: column; align-items: center; justify-content: space-between; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Popup/Popup_Frame01_Navy.png?fileID=21300000&amp;guid=eb3db5b0868bc4f348e3d3a1dfbf32a8&amp;type=3#Popup_Frame01_Navy&apos;); position: absolute; padding-bottom: 1.5%; top: 3%; -unity-background-image-tint-color: rgba(255, 255, 255, 0.51); border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;">
+            <ui:VisualElement name="bttom_carName-container" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100%; height: 253px;">
+                <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="carName-label" class="common__text" style="position: absolute; width: 100%; height: 75px; top: 25px; font-size: 90px;" />
+                <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="carClass-label" class="common__text" style="position: absolute; width: 100%; height: 75px; font-size: 60px; bottom: 73px;" />
+                <ui:VisualElement name="popup_title" style="background-color: rgba(0, 0, 0, 0); position: absolute; flex-shrink: 0; width: 100%; height: 70px; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Popup/Popup_00_TitleLIne.png?fileID=21300000&amp;guid=228b09b7fa1c5455eab8432a85fac4ee&amp;type=3#Popup_00_TitleLIne&apos;); bottom: -10px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="bottom_carState-container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; padding-left: 10px; padding-right: 10px; padding-bottom: 8px; padding-top: 10px; justify-content: space-around;">
+                <ui:VisualElement name="MaxSpeed-container" class="carState-container">
+                    <ui:Label tabindex="-1" text="최고속도" display-tooltip-when-elided="true" enable-rich-text="false" name="MaxSpeed-label" class="common__text carState-label" style="font-size: 60px;" />
+                    <ui:ProgressBar value="0" name="MaxSpeed-ProgressBar" high-value="100" class="carState-ProgressBar" style="width: 830px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Acceleration-container" class="carState-container">
+                    <ui:Label tabindex="-1" text="가속력" display-tooltip-when-elided="true" enable-rich-text="false" name="Acceleration-label" class="common__text carState-label" style="font-size: 55px;" />
+                    <ui:ProgressBar value="0" name="Acceleration-ProgressBar" high-value="10000" class="carState-ProgressBar" style="width: 830px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="TurnSpeed-container" class="carState-container">
+                    <ui:Label tabindex="-1" text="핸들링" display-tooltip-when-elided="true" enable-rich-text="false" name="TurnSpeed-label" class="common__text carState-label" style="font-size: 60px;" />
+                    <ui:ProgressBar value="0" name="TurnSpeed-ProgressBar" high-value="10" class="carState-ProgressBar" style="width: 830px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Durability-container" class="carState-container">
+                    <ui:Label tabindex="-1" text="연료" display-tooltip-when-elided="true" enable-rich-text="false" name="Durability-label" class="common__text carState-label" style="font-size: 60px;" />
+                    <ui:ProgressBar value="1300" name="Durability-ProgressBar" high-value="2600" low-value="1300" class="carState-ProgressBar" style="width: 830px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="bottom-container" class="bottom" style="height: 20%; justify-content: flex-end;">
+            <ui:VisualElement name="bottom-carBuy-VisualElement" style="background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Popup/Popup_Frame01_Navy.png?fileID=21300000&amp;guid=eb3db5b0868bc4f348e3d3a1dfbf32a8&amp;type=3#Popup_Frame01_Navy&apos;); height: 100%; width: 85%; align-items: center; justify-content: center; flex-direction: row; display: flex;">
+                <ui:VisualElement name="VisualElement" style="background-color: rgb(255, 255, 255); width: 180px; height: 180px; flex-shrink: 0; margin-right: 20px; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Icon_ItemIcons(x2)/256/Icon_Gold.png?fileID=21300000&amp;guid=8a860a365a3ee478c819168fddfc98d7&amp;type=3#Icon_Gold&apos;); -unity-background-scale-mode: scale-to-fit; border-top-left-radius: 30px; border-bottom-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; justify-content: center;" />
+                <ui:Label tabindex="-1" text="SELECT" display-tooltip-when-elided="true" picking-mode="Ignore" name="CarPirce-label" class="common__text select-label" style="flex-shrink: 1; font-size: 100%; -unity-text-align: middle-center; width: 530px; height: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="bottom_carButtons-container" class="button-container">
+                <ui:Button display-tooltip-when-elided="true" name="car_left-button" class="button--active leftButton" style="width: 10%; height: 100%; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Icon_PictoIcons(x2)/256/Pictoicon_Arrow_Prev.Png?fileID=21300000&amp;guid=1c16ffc8a7a484e0bac31141260b79da&amp;type=3#Pictoicon_Arrow_Prev&apos;); -unity-background-scale-mode: scale-and-crop; background-color: rgba(188, 188, 188, 0); margin-left: 2%; margin-right: 2%; margin-top: 0; margin-bottom: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); transition-property: translate, scale; transition-duration: 0.3s, 0.3s; transition-timing-function: ease-in-back, ease-in-back; padding-left: 0; flex-shrink: 1;" />
+                <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" name="select-button" class="slelectButton" style="flex-shrink: 1; width: 40%; height: 70%;">
+                    <ui:Label tabindex="-1" text="선택" display-tooltip-when-elided="true" picking-mode="Ignore" name="select-label" enable-rich-text="true" class="common__text select-label" style="flex-shrink: 1; font-size: 100%; -unity-text-align: middle-right;" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="car_right-button" class="button--active rightButton" style="width: 10%; height: 100%; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Icon_PictoIcons(x2)/256/Pictoicon_Arrow_Next.Png?fileID=21300000&amp;guid=f68ad9967571c44759536e586a5101de&amp;type=3#Pictoicon_Arrow_Next&apos;); -unity-background-scale-mode: scale-and-crop; background-color: rgba(188, 188, 188, 0); margin-left: 2%; margin-right: 2%; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); transition-property: translate, scale; transition-timing-function: ease-in-back, ease-in-back; transition-duration: 0.3s, 0.3s; flex-shrink: 1;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

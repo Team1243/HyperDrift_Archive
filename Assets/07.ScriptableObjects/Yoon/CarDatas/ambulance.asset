@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9379df72ff394b040820198b1a26f0d2, type: 3}
+  m_Name: ambulance
+  m_EditorClassIdentifier: 
+  CarClass: 3
+  CarName: "\uC570\uBDF8\uB7F0\uC2A4"
+  CarModel: {fileID: 4909322155405935159, guid: 5d69b85cd02329a42b4c64b7c8d9e79d,
+    type: 3}
+  CarMass: 1
+  Acceleration: 11000
+  TurnSpeed: 6
+  MaxSpeed: 77.5
+  Price: 25000
+  Fuel: 2000
+  RayDistance: 1
+  ColliderRadius: 0.59
+  ColliderCenter: {x: 0, y: 0.63, z: -0.025}
+  IsRock: 0

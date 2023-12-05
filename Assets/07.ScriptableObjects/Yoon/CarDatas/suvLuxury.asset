@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9379df72ff394b040820198b1a26f0d2, type: 3}
+  m_Name: suvLuxury
+  m_EditorClassIdentifier: 
+  CarClass: 3
+  CarName: "SUV-\uB7ED\uC154\uB9AC"
+  CarModel: {fileID: 8339561313075110557, guid: 417022f3dea313145b820c466b211201,
+    type: 3}
+  CarMass: 1
+  Acceleration: 13000
+  TurnSpeed: 6.5
+  MaxSpeed: 80
+  Price: 25000
+  Fuel: 1780
+  RayDistance: 1
+  ColliderRadius: 0.6
+  ColliderCenter: {x: 0, y: 0.61, z: -0.15}
+  IsRock: 0

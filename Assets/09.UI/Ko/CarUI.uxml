@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Button display-tooltip-when-elided="true" name="car-button" style="flex-grow: 1; border-top-left-radius: 3%; border-bottom-left-radius: 3%; border-top-right-radius: 3%; border-bottom-right-radius: 3%;">
+        <ui:VisualElement name="car-image" picking-mode="Ignore" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); -unity-background-scale-mode: scale-to-fit; background-image: url(&apos;project://database/Assets/02.Sprites/Ko/bRUj8GnD3x9vZVUiWoUS9y4sb.jpg?fileID=21300000&amp;guid=6f5fc6f9b92360941b98972bd22ac330&amp;type=3#bRUj8GnD3x9vZVUiWoUS9y4sb&apos;);" />
+    </ui:Button>
+</ui:UXML>

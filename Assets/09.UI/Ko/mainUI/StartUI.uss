@@ -1,0 +1,32 @@
+.Mid_pannel--Garage {
+    translate: 100% 0;
+}
+
+.Mid_pannel--Social {
+    translate: -100% 0;
+}
+
+.Button-Bound {
+    background-image: url('project://database/Assets/02.Sprites/Ko/assets/Button_01.png?fileID=21300000&guid=f7f8eda0cfa73074f9bcf5faac664060&type=3#Button_01');
+    min-width: 40%;
+    max-width: 45%;
+    max-height: 100%;
+    min-height: 100%;
+    width: 40%;
+}
+
+.Pannel--Chest {
+    background-color: rgb(0, 0, 0);
+    width: 90%;
+    height: 70%;
+    transition-timing-function: ease-in-sine;
+    transition-duration: 0.1s;
+}
+
+.fadeIn {
+    background-color: rgba(0, 0, 0, 0.81);
+}
+
+.popup-down {
+    translate: 0 500%;
+}

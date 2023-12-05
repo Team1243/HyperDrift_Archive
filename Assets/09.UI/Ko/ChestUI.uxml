@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/09.UI/Ko/StartUI.uss?fileID=7433441132597879392&amp;guid=63fc558a1b993ed4ca9d19172cb8e526&amp;type=3#StartUI" />
+    <Style src="project://database/Assets/09.UI/Ko/timer.uss?fileID=7433441132597879392&amp;guid=4ad35e576422fd64bb1420d44d6b8f8d&amp;type=3#timer" />
+    <ui:VisualElement name="chest-pannel" style="width: 100%; height: 100%; background-color: rgb(0, 0, 0);">
+        <ui:VisualElement name="time-pannel" style="background-color: rgb(0, 0, 0); width: 100%; height: 16%; flex-direction: row; justify-content: center; align-self: center; align-items: center; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+            <ui:VisualElement name="timer-Image" style="background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/02.Sprites/Ko/free-icon-hourglass-3889548_1.png?fileID=21300000&amp;guid=4cb0892dd794e3d47893687faa324b4f&amp;type=3#free-icon-hourglass-3889548_1&apos;); width: 20%; height: 200%; transition-timing-function: ease-in-sine; transition-duration: 0.1s; -unity-background-scale-mode: scale-to-fit;" />
+            <ui:Label tabindex="-1" text="55분12초" display-tooltip-when-elided="true" name="timer-Label" style="-unity-text-align: middle-center; color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 7%; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="chestImage-pannel" style="width: 100%; height: 84%; padding-left: 2%; padding-right: 2%; padding-top: 0; padding-bottom: 2%;">
+            <ui:VisualElement name="chest-Image" style="flex-grow: 1; background-color: rgb(255, 255, 255); height: 100%; width: 100%; background-image: url(&apos;project://database/Assets/02.Sprites/Ko/bRUj8GnD3x9vZVUiWoUS9y4sb.jpg?fileID=21300000&amp;guid=6f5fc6f9b92360941b98972bd22ac330&amp;type=3#bRUj8GnD3x9vZVUiWoUS9y4sb&apos;); -unity-background-scale-mode: scale-and-crop;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

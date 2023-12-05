@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/09.UI/Kyeong/CountUI/CountUI.uss?fileID=7433441132597879392&amp;guid=4e63f6a26cf69dd408043082122cf4e4&amp;type=3#CountUI" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: center;">
+        <ui:VisualElement name="Count" class="Count" style="background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/02.Sprites/Kyeong/UI/CountUI/Three_Box.png?fileID=2800000&amp;guid=08e2d58b45dd4b847b7b95fd3e725e28&amp;type=3#Three_Box&apos;);" />
+    </ui:VisualElement>
+</ui:UXML>

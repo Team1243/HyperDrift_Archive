@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c1f6b4b139efa4c970de3e60ccb38b, type: 3}
+  m_Name: Poolables
+  m_EditorClassIdentifier: 
+  poolables:
+  - prefab: {fileID: 8942762637640729197, guid: 1b2e84edaa6c214419b0a3bfa320a158,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 1101470209655368419, guid: fac0ecc7f84ce3d419a0efe3d6fd8d21,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 3374297724989029516, guid: 1647f999632433244aa0427beb1d6df4,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 5781125671275769129, guid: ce7e629224a899c409cddebdba7b5dc0,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 6706337875666774634, guid: f7e657c3ca4220747ad22650d75d4885,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 5849870016147396441, guid: c96e21cc64cac7a408a3537e439861ae,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 6679520610617199244, guid: c4b60ed92594cee4e9f264316c82e67c,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 2688050479921222412, guid: edd4dc504d7cec843ba7161c04717ff7,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 7688372548441786400, guid: 32f77d54a18b1644db5615df67f020ed,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 2089631494160636881, guid: 72980090942b22d47bf646a5d85927a5,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 4951819660386412747, guid: 827ecca8765a5e54b8d574cbf48860e7,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 4507915974435984457, guid: c81a40e967264c046b91e2b25f8c911f,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 2157956241052250502, guid: e75054db87cb481419e655e78b64729f,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 3000288480488430640, guid: 4c33016f3029bab458c8ce0e8921590a,
+      type: 3}
+    count: 2
+  - prefab: {fileID: 37688544755571642, guid: 77d763d9a8d22604d881eb6eaeb0108b, type: 3}
+    count: 2

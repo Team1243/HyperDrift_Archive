@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="MenuBar" src="project://database/Assets/09.UI/Ko/MenuBar.uxml?fileID=9197481963319205126&amp;guid=b9006185b507fdc49b5a9df3da09d776&amp;type=3#MenuBar" />
+    <ui:Instance template="MenuBar" name="MenuBar" style="position: absolute; width: 100%; height: 100%; flex-grow: 1; display: none;" />
+</ui:UXML>

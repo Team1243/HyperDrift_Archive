@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: auto;">
+        <ui:VisualElement name="Gauge" style="background-color: rgba(0, 0, 0, 0); width: 25%; background-image: url(&apos;project://database/Assets/02.Sprites/Kyeong/UI/Gauge.png?fileID=21300000&amp;guid=3601ae727c8fada40b6296603da57dcd&amp;type=3#Gauge&apos;); -unity-background-scale-mode: stretch-to-fill; height: 15%;" />
+    </ui:VisualElement>
+</ui:UXML>

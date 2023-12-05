@@ -1,0 +1,82 @@
+.GamePause {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.63);
+    align-items: center;
+    display: flex;
+    transition-duration: 0.3s;
+}
+
+.GamePause.off {
+    opacity: 0;
+    translate: 0 0;
+}
+
+.GameOver {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    align-items: center;
+    overflow: visible;
+    display: flex;
+    transition-duration: 0.3s;
+    visibility: visible;
+}
+
+.GameOver.off {
+    opacity: 1;
+    translate: 1749% 0;
+    visibility: visible;
+    overflow: visible;
+    display: flex;
+}
+
+.GameExitButton {
+    background-image: url('project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Popup/Popup_Frame01_Purple.png?fileID=21300000&guid=2feaafe4e67104e6fbd6232e8f31f297&type=3#Popup_Frame01_Purple');
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 390px;
+    bottom: 25px;
+    -unity-background-scale-mode: stretch-to-fill;
+    background-color: rgba(35, 38, 47, 0);
+    position: absolute;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.GameExitButton.off {
+    opacity: 0;
+}
+
+.GamePause-Button {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-image: url('project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Icon_PictoIcons(x2)/512/Pictoicon_Control_Pause.Png?fileID=21300000&guid=1da2538b8d44a4919869a3c68117ad3c&type=3#Pictoicon_Control_Pause');
+    background-color: rgba(188, 188, 188, 0);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    left: 17px;
+    top: 17px;
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    transition-timing-function: ease-out-bounce;
+    transition-duration: 0.2s;
+}
+
+.GamePause-Button:active {
+    scale: 1.2 1.2;
+}

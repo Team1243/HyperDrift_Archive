@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82de038a2b6b24241ae7787517e6a9d9, type: 3}
+  m_Name: SnowCollection
+  m_EditorClassIdentifier: 
+  roadBehind: {fileID: 7339982598388762842, guid: b7a990ccda030a44cade03bd6819049e,
+    type: 3}
+  startSection: {fileID: 8765225307190319168, guid: c59e12db5d356f84892f1b0590edd460,
+    type: 3}
+  sections:
+  - {fileID: 9075315251851884907, guid: 4a17bd59eb7c75e4a8228dab44a35c27, type: 3}
+  - {fileID: 9145047710730339179, guid: 60fd1204078bc8d4ab3abb3b6e007dab, type: 3}
+  - {fileID: 2353172987750956329, guid: 8c6091cb9523f1440a94525eae833dec, type: 3}
+  - {fileID: 7365261531156647985, guid: f901a6b785c1c2543b78d3772826d2fe, type: 3}
+  - {fileID: 2687599228487701975, guid: 80edec4db9cb00f4c8afa9f0e8a9b0ed, type: 3}
+  - {fileID: 7108767779692499119, guid: 6196728326595d14dbf4125076cae57d, type: 3}
+  - {fileID: 8765225307190319168, guid: c59e12db5d356f84892f1b0590edd460, type: 3}
+  - {fileID: 8546347273784441639, guid: 478ea3f133269b0479835ae17e96ad38, type: 3}
+  - {fileID: 1292353829207910736, guid: 2f4899db800edad44a2b9cfa06780dd4, type: 3}
+  - {fileID: 347383888273273237, guid: e77ee9a8aefa7e44ca5578f05e882745, type: 3}
+  - {fileID: 2534535880978531847, guid: aa245a059cb8dc744b6422234b160818, type: 3}
+  - {fileID: 3718307202130384905, guid: 1ec4c07003a3dfa4d9a8afca55f8e885, type: 3}
+  - {fileID: 1138676115521350647, guid: 96a49abe415d76c4ba65526beee2a785, type: 3}

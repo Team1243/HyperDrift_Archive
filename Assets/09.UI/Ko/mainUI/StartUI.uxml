@@ -1,0 +1,65 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="ChestUI" src="project://database/Assets/09.UI/Ko/ChestUI.uxml?fileID=9197481963319205126&amp;guid=1e56b51aa1a24f34d9e9e7ed6b321f31&amp;type=3#ChestUI" />
+    <Style src="project://database/Assets/09.UI/Ko/mainUI/StartUI.uss?fileID=7433441132597879392&amp;guid=63fc558a1b993ed4ca9d19172cb8e526&amp;type=3#StartUI" />
+    <Style src="project://database/Assets/09.UI/Ko/common.uss?fileID=7433441132597879392&amp;guid=4e7a549603c2b9542ab080caef3c25c7&amp;type=3#common" />
+    <ui:VisualElement style="flex-grow: 1; justify-content: space-between; align-items: stretch;">
+        <ui:VisualElement name="Background-VisualElement" style="flex-grow: 1; background-color: rgba(255, 255, 255, 0); position: absolute; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Demo/Demo_Background/Background_06.png?fileID=21300000&amp;guid=96274b6f4982041558dfdc5471747076&amp;type=3#Background_06&apos;); width: 100%; height: 100%; align-items: center; display: flex; justify-content: center; left: 0; transition-timing-function: ease-in-out-sine; transition-duration: 0.5s;" />
+        <ui:VisualElement name="Top-VisualElementl" style="flex-grow: 0; width: 100%; height: 10%; flex-shrink: 0; align-items: center; flex-direction: row; justify-content: space-around; position: relative; opacity: 1; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;">
+            <ui:VisualElement name="Top-pannel" style="width: 90%; height: 85%; flex-direction: row; justify-content: center; background-image: url(&apos;project://database/Assets/02.Sprites/Ko/assets/Bar_layer1.png?fileID=21300000&amp;guid=84b1ac29157999844877cf9eedebfd08&amp;type=3#Bar_layer1&apos;); padding-left: 70px; padding-right: 70px;">
+                <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" class="common-text" style="justify-content: center; -unity-text-align: middle-center; -unity-font-style: bold; text-overflow: clip; font-size: 20%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" name="setting-button" style="position: absolute; background-color: rgba(188, 188, 188, 0); background-image: url(&apos;project://database/Assets/02.Sprites/Ko/assets/Settings.png?fileID=21300000&amp;guid=577ac81c8a7e7b14f8a73176894c51fe&amp;type=3#Settings&apos;); -unity-background-scale-mode: scale-to-fit; right: 0; height: 100%; width: 20%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Mid-VisualElementl" style="flex-grow: 1; justify-content: flex-start; flex-wrap: wrap; left: -100%; transition-timing-function: ease-in-out-sine; transition-duration: 0.5s;">
+            <ui:VisualElement name="Garage-pannel" style="flex-grow: 1; background-color: rgba(3, 0, 255, 0); width: 100%; height: 100%; display: flex;">
+                <ui:VisualElement name="car-panel" style="background-color: rgba(229, 102, 102, 0); width: 100%; height: 50%; justify-content: flex-end; align-items: center;">
+                    <ui:VisualElement name="car-image" style="background-color: rgba(0, 0, 0, 0); width: 45%; height: 45%; -unity-background-scale-mode: scale-to-fit; margin-bottom: 3%;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="car-container" style="background-color: rgb(255, 255, 255); width: 100%; height: 50%; border-top-left-radius: 35px; border-bottom-right-radius: 0; border-top-right-radius: 35px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Main-pannel" style="width: 100%; height: 100%; display: flex;">
+                <ui:VisualElement name="Stage-pannel" style="width: 100%; height: 60%; align-items: center; justify-content: space-around; align-self: flex-start;">
+                    <ui:VisualElement name="stage-backgroundShadow" picking-mode="Ignore" style="background-color: rgb(220, 220, 220); width: 80%; height: 90%; border-top-left-radius: 50px; border-bottom-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; align-items: center; justify-content: center; position: absolute; scale: 1.02 1.02; left: 11%; bottom: 4%;" />
+                    <ui:VisualElement name="stage-background" style="background-color: rgb(255, 255, 255); width: 80%; height: 90%; border-top-left-radius: 50px; border-bottom-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; align-items: center; justify-content: center;">
+                        <ui:Button text="STAGE" display-tooltip-when-elided="true" name="stage-button" class="common-text common-button" style="height: 12%; width: 86%; flex-shrink: 1; padding-left: 3%; padding-right: 3%; padding-top: 1%; padding-bottom: 1%; -unity-background-scale-mode: scale-and-crop;" />
+                        <ui:VisualElement name="stage-image" style="flex-shrink: 0; height: 50%; width: 60%; background-image: url(&apos;project://database/Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/Circle.png?fileID=-2413806693520163455&amp;guid=ebe73ca9363db456bacf42c025bb4847&amp;type=3#Circle&apos;); margin-top: 4%; margin-bottom: 4%; background-color: rgb(0, 0, 0); border-top-left-radius: 100%; border-bottom-left-radius: 100%; border-top-right-radius: 100%; border-bottom-right-radius: 100%; justify-content: center; align-items: center;" />
+                        <ui:Button text="START" display-tooltip-when-elided="true" name="start-button" class="common-text common-button" style="height: 12%; width: 86%; flex-shrink: 1; padding-left: 3%; padding-right: 3%; padding-top: 1%; padding-bottom: 1%; -unity-background-scale-mode: scale-and-crop;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Chest-pannel" style="width: 100%; display: flex; align-items: center; height: 40%; justify-content: center;">
+                    <ui:VisualElement name="Chests-pannels" style="flex-grow: 0; width: 100%; height: 75%; flex-direction: row; align-items: center; justify-content: space-around;">
+                        <ui:VisualElement name="Chests-pannel0" style="flex-grow: 1; width: 100%; height: 100%; justify-content: center; align-self: auto; align-items: center;">
+                            <ui:VisualElement name="Chest-Item0" class="Pannel--Chest" style="display: flex;">
+                                <ui:Instance template="ChestUI" name="ChestUI0" style="width: 100%; height: 100%; display: flex;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Chests-pannel1" style="flex-grow: 1; width: 100%; height: 100%; justify-content: center; align-self: auto; align-items: center;">
+                            <ui:VisualElement name="Chest-Item1" class="Pannel--Chest">
+                                <ui:Instance template="ChestUI" name="ChestUI1" style="width: 100%; height: 100%; display: flex;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Chests-pannel2" style="flex-grow: 1; width: 100%; height: 100%; justify-content: center; align-self: auto; align-items: center;">
+                            <ui:VisualElement name="Chest-Item2" class="Pannel--Chest">
+                                <ui:Instance template="ChestUI" name="ChestUI2" style="width: 100%; height: 100%; display: flex;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Chests-pannel3" style="flex-grow: 1; width: 100%; height: 100%; justify-content: center; align-self: auto; align-items: center;">
+                            <ui:VisualElement name="Chest-Item3" class="Pannel--Chest">
+                                <ui:Instance template="ChestUI" name="ChestUI3" style="width: 100%; height: 100%; display: flex;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Social-pannel" style="flex-grow: 1; background-color: rgb(105, 255, 0); width: 100%; height: 100%; display: flex;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Bottom-VisualElementl" style="flex-grow: 0; width: 100%; height: 10%; flex-shrink: 1; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: flex-end; align-self: stretch;">
+            <ui:Button text="Button" display-tooltip-when-elided="true" />
+        </ui:VisualElement>
+        <ui:VisualElement name="setting-pannel" style="transition-duration: 0.3s; position: absolute; width: 100%; height: 100%; align-items: center; justify-content: center; visibility: visible; display: none;">
+            <ui:VisualElement name="popup-container" class="popup-down" style="background-color: rgb(255, 255, 255); width: 80%; height: 40%; border-top-left-radius: 4%; border-bottom-left-radius: 4%; border-top-right-radius: 4%; border-bottom-right-radius: 4%; flex-shrink: 0; transition-duration: 0.3s; transition-timing-function: ease-out-sine;">
+                <ui:Button display-tooltip-when-elided="true" name="close-button" style="position: absolute; top: 0; right: 0; background-image: url(&apos;project://database/Assets/02.Sprites/Ko/assets/CheckBoxCheck.png?fileID=21300000&amp;guid=25b994211d4157b439e927722bce7bbe&amp;type=3#CheckBoxCheck&apos;); background-color: rgba(188, 188, 188, 0); -unity-background-scale-mode: scale-to-fit; width: 19%; height: 19%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

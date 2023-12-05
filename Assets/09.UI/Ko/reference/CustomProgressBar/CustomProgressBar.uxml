@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/09.UI/Ko/reference/CustomProgressBar/CustomProgressBar.uss?fileID=7433441132597879392&amp;guid=88dd1caa5d538484bbd4793d44b38aa6&amp;type=3#CustomProgressBar" />
+    <ui:VisualElement style="margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px;">
+        <ui:VisualElement style="max-height: 24px; min-height: 24px;" />
+    </ui:VisualElement>
+    <ui:ProgressBar value="72.3" name="Acceleration" style="opacity: 1;" />
+</ui:UXML>
