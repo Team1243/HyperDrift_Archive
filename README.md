@@ -33,12 +33,12 @@
 
 **[고다민](https://github.com/damin06 "다민의 깃허브") (ko060614@gmail.com)**
   - 전체적인 UI 구현 
-  - 코인 및 하트 시스템 
 <br/>
     
 **[윤희수](https://github.com/heesoo1114 "희수의 깃허브") (improveme7@gmail.com)**
   - 출석보상 및 퀘스트
   - 일부 인 게임 파티클
+  - 코인 및 하트 시스템 
  <br/>
     
 **[경동엽](https://github.com/DDongYeop "동엽의 깃허브") (ddongyeop0129@gmail.com)**
