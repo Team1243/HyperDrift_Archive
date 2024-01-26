@@ -5,48 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55248505-b514-48ea-8822-db8fd6438839" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperDrift/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperDrift/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scripts/Kyeong/Core/TimeSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scripts/Kyeong/Core/TimeSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scripts/Kyeong/Player/CarMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scripts/Kyeong/Player/CarMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04.Materials/Kyeong/Particle/DriftParticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/04.Materials/Kyeong/Particle/DriftParticle.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/ambulance.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/ambulance.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/ambulance.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/ambulance.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/delivery.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/delivery.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/delivery.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/delivery.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/deliveryFlat.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/deliveryFlat.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/deliveryFlat.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/deliveryFlat.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/firetruck.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/firetruck.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/firetruck.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/firetruck.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/garbageTruck.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/garbageTruck.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/garbageTruck.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/garbageTruck.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/hatchbackSports.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/hatchbackSports.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/hatchbackSports.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/hatchbackSports.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/police.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/police.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/police.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/police.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/raceBlue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/raceBlue.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/raceBlue.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/raceBlue.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/raceRed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/raceRed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/raceRed.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/raceRed.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/sedan.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/sedan.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/sedan.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/sedan.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/sedanSports.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/sedanSports.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/sedanSports.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/sedanSports.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/suv.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/suv.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/suv.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/suv.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/suvLuxury.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/suvLuxury.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/suvLuxury.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/suvLuxury.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/taxi.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/taxi.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/taxi.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/taxi.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/tractor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/tractor.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/tractor.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/tractor.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/tractorPolice.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/tractorPolice.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/tractorPolice.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/tractorPolice.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/truck.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/truck.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/truck.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/truck.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/van.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/van.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/van.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/07.ScriptableObjects/Yoon/CarDatas/van.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/09.UI/Kyeong/CountUI/CountMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/09.UI/Kyeong/CountUI/CountMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/09.UI/Kyeong/CountUI/CountTexture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/09.UI/Kyeong/CountUI/CountTexture.renderTexture" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SaveData/Car/ambulance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/Car/ambulance.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SaveData/Car/delivery.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/Car/delivery.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SaveData/Car/deliveryFlat.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/Car/deliveryFlat.json" afterDir="false" />
@@ -65,7 +23,8 @@
       <change beforePath="$PROJECT_DIR$/Assets/SaveData/Car/tractorPolice.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/Car/tractorPolice.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SaveData/Car/truck.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/Car/truck.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SaveData/Car/van.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SaveData/Car/van.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/High Fidelity_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/High Fidelity_PipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +47,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Dongyeop-New__Car",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -149,6 +108,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700568210211</updated>
       <workItem from="1700568212837" duration="1405000" />
+      <workItem from="1702357665648" duration="449000" />
     </task>
     <servers />
   </component>

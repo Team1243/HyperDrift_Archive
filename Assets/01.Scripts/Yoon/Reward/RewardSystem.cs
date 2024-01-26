@@ -15,13 +15,13 @@ public class RewardSystem : MonoBehaviour
     private void OnEnable()
     {
         DailyBonusPopup.OnRecieveReward += GiveReward;
-        // 나중에 여기에 퀘스트 보상 수령 버튼 눌렀을 때 액션 넣어주어야 함
+        QuestUI.OnRecieveReward += GiveReward;
     }
 
     private void OnDisable()
     {
         DailyBonusPopup.OnRecieveReward -= GiveReward;
-        // 나중에 여기에 퀘스트 보상 수령 버튼 눌렀을 때 액션 넣어주어야 함
+        QuestUI.OnRecieveReward -= GiveReward;
     }
 
     public void GiveReward(RewardInfo info)

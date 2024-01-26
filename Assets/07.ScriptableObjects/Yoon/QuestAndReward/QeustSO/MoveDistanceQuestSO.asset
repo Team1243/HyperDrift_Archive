@@ -15,5 +15,5 @@ MonoBehaviour:
   id: MoveDistance
   displayName: "\uC8FC\uD589\uC758 \uB2EC\uC778"
   description: "\uD55C \uAC8C\uC784\uC5D0\uC11C \uCD1D \uC8FC\uD589 \uAC70\uB9AC\uB97C
-    5km \uC774\uC0C1 \uB2EC\uC131\uD558\uC138\uC694."
+    20m \uC774\uC0C1 \uB2EC\uC131\uD558\uC138\uC694."
   job: {fileID: 11400000, guid: 80426be5f85e5a147bc6bfd3d9531bd8, type: 2}

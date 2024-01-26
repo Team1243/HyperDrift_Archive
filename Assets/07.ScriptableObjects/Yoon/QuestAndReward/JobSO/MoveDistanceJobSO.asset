@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: MoveDistanceJobSO
   m_EditorClassIdentifier: 
   displayName: "\uC8FC\uD589 \uAC70\uB9AC"
-  description: "\uC8FC\uD589 \uAC70\uB9AC 500m \uC774\uC0C1"
-  action: {fileID: 11400000, guid: d55a65d87be01dc48afa250171ccc5ee, type: 2}
+  description: "1\uD68C \uB2EC\uC131"
   goalProgressValue: 1
+  saveKey: moveDistance

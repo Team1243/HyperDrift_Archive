@@ -104,4 +104,5 @@
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
+    <ui:Button display-tooltip-when-elided="true" name="AddHeart-Button" style="position: absolute; right: 0; bottom: 0; width: 150px; height: 150px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-color: rgba(188, 188, 188, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
 </ui:UXML>

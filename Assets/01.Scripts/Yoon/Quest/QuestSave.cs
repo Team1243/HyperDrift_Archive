@@ -1,26 +1,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class QuestSave : MonoBehaviour
 {
-    public static QuestSave Instance = null;
-
     [SerializeField] private QuestInfoListSO questListSO;
     private string savePath;
     private Dictionary<string, Quest> saveFile = new Dictionary<string, Quest>();
 
     private void Awake()
     {
-        Instance = this;
-
         if (Application.platform == RuntimePlatform.Android)
         {
-            savePath = Application.dataPath + "/SaveData/Quest/";
+            savePath = Application.persistentDataPath + "/SaveData/Quest/";
         }
         else
         {
-            savePath = Application.persistentDataPath + "/SaveData/Quest/";
+            savePath = Application.dataPath + "/SaveData/Quest/";
         }
 
         if (!Directory.Exists(savePath))
@@ -33,17 +30,25 @@ public class QuestSave : MonoBehaviour
             saveFile.Add(saveData.Id, saveData);
         }
 
-        Load();
+        // Load();
+
+        // SceneManager.sceneLoaded += OnSceneLoaded;
     }
+
+    /*void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Save();
+        Load();
+    }*/
 
     private void OnEnable()
     {
-        Save();
+        Load();
     }
 
     private void OnDisable()
     {
-        Load();
+        Save();
     }
 
     // 전체 SO 저장
@@ -56,6 +61,7 @@ public class QuestSave : MonoBehaviour
             File.WriteAllText(savePath + saveFile[str].Id + "Quest.json", questJson);
             File.WriteAllText(savePath + saveFile[str].Id + "Job.json", jobJson);
         }
+        Debug.LogError("SAVE!!!");
     }
 
     // 특정 SO만 저장
@@ -78,6 +84,7 @@ public class QuestSave : MonoBehaviour
 
             string questJson = File.ReadAllText(savePath + saveFile[str].Id + "Quest.json");
             string jobJson = File.ReadAllText(savePath + saveFile[str].Id + "Job.json");
+            // Debug.LogError(jobJson);
             
             Quest data = JsonUtility.FromJson<Quest>(questJson);
             {
@@ -95,14 +102,15 @@ public class QuestSave : MonoBehaviour
                 saveFile[str].Job = tempJob; 
                 
                 // RewardInfo
-                RewardInfo tempRewardInfo = data.GetRewardInfo();
+                RewardInfo tempRewardInfo = data.RewardInfo;
                 saveFile[str].SetRewardInfo(tempRewardInfo);
 
-                if (data.IsRunning == false)
+                if (data.IsRegistered)
                 {
                     data.OnRunning();
                 }
             }
         }
+        Debug.LogError("LOAD!!!");
     }
 }

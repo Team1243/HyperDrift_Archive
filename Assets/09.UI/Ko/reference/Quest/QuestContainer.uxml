@@ -2,6 +2,7 @@
     <Style src="project://database/Assets/09.UI/Ko/reference/CustomProgressBar/CustomProgressBar.uss?fileID=7433441132597879392&amp;guid=88dd1caa5d538484bbd4793d44b38aa6&amp;type=3#CustomProgressBar" />
     <Style src="project://database/Assets/09.UI/Ko/common.uss?fileID=7433441132597879392&amp;guid=4e7a549603c2b9542ab080caef3c25c7&amp;type=3#common" />
     <Style src="project://database/Assets/09.UI/Ko/reference/Quest/QuestContainer.uss?fileID=7433441132597879392&amp;guid=c1aad61f216ca0940a6fb9ca38f84fd0&amp;type=3#QuestContainer" />
+    <Style src="project://database/Assets/09.UI/Ko/reference/DayilBonus/DailyBonus.uss?fileID=7433441132597879392&amp;guid=b13619986c9e8e643b5f2cd4ccdd8d4b&amp;type=3#DailyBonus" />
     <ui:VisualElement name="Quest-container" style="background-color: rgba(0, 0, 0, 0); width: 90%; height: 800px; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Frame/Frame_ListFrame14_n_Blue.png?fileID=21300000&amp;guid=24519d9e5e416492cb02278ecb464d63&amp;type=3#Frame_ListFrame14_n_Blue&apos;); padding-bottom: 25px; padding-right: 10px; padding-left: 10px; padding-top: 10px;">
         <ui:VisualElement name="glow-VisualElement" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); height: 100%; width: 100%; position: absolute; flex-shrink: 0; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Frame/Frame_CardFrame00_BackGlow.png?fileID=21300000&amp;guid=30af861f4c8c141159c3c1ff5b424c3c&amp;type=3#Frame_CardFrame00_BackGlow&apos;); -unity-background-scale-mode: scale-to-fit; -unity-background-image-tint-color: rgba(167, 220, 255, 0.39);" />
         <ui:VisualElement name="QuestName-container" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100%; flex-shrink: 0; height: 130px; flex-direction: row; align-items: center;">
@@ -13,16 +14,16 @@
                 <ui:Label tabindex="-1" text="설명충 퀘스트" display-tooltip-when-elided="true" name="QuestExplanation-Label" class="common__text" style="font-size: 50px; width: 100%; height: 100%; -unity-text-align: upper-left; white-space: normal;" />
             </ui:VisualElement>
             <ui:Button display-tooltip-when-elided="true" name="QuestExplanation-Button" class="QuestExplanation-Button off">
-                <ui:VisualElement name="QuestReward_Gold-container" style="background-color: rgba(0, 0, 0, 0); flex-shrink: 0; width: 85%; height: 25%; flex-direction: row; align-items: center; justify-content: center;">
-                    <ui:VisualElement name="QuestReward_Gold-Icon" style="background-color: rgba(0, 0, 0, 0); width: 30%; height: 100%; flex-shrink: 0; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Icon_ItemIcons(x2)/256/Icon_Gold.png?fileID=21300000&amp;guid=8a860a365a3ee478c819168fddfc98d7&amp;type=3#Icon_Gold&apos;); -unity-background-scale-mode: scale-to-fit;" />
-                    <ui:Label tabindex="-1" text="0" display-tooltip-when-elided="true" name="QuestReward_Gold_Label" class="common__text" style="font-size: 60%; width: 40%; height: 100%;" />
+                <ui:VisualElement name="QuestReward_Gold-container" picking-mode="Ignore" style="background-color: rgba(0, 0, 0, 0); flex-shrink: 0; width: 85%; height: 25%; flex-direction: row; align-items: center; justify-content: center;">
+                    <ui:VisualElement name="QuestReward_Gold-Icon" picking-mode="Ignore" style="background-color: rgba(0, 0, 0, 0); width: 30%; height: 100%; flex-shrink: 1; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Icon_ItemIcons(x2)/256/Icon_Gold.png?fileID=21300000&amp;guid=8a860a365a3ee478c819168fddfc98d7&amp;type=3#Icon_Gold&apos;); -unity-background-scale-mode: scale-to-fit; margin-right: 9%;" />
+                    <ui:Label tabindex="-1" text="0" display-tooltip-when-elided="true" name="QuestReward_Gold_Label" picking-mode="Ignore" class="common__text" style="font-size: 60%; width: 40%; height: 100%;" />
                 </ui:VisualElement>
             </ui:Button>
         </ui:VisualElement>
         <ui:VisualElement name="QuestProgress-container" style="background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: center; flex-grow: 1; width: 100%;">
             <ui:ProgressBar value="0" name="QuestProgress-Progress" style="width: 90%; flex-shrink: 1; justify-content: center;" />
         </ui:VisualElement>
-        <ui:VisualElement name="QuestClear-container" class="QuestRunning" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.47); position: absolute; flex-shrink: 0; width: 100%; height: 100%;">
+        <ui:VisualElement name="QuestClear-container" class="QuestRunning" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; flex-shrink: 0; width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Frame/Frame_BasicFrame_Square02.png?fileID=21300000&amp;guid=0357d37ff2ce1443485aa680e89d82f0&amp;type=3#Frame_BasicFrame_Square02&apos;); left: -1px; top: -1px;">
             <ui:VisualElement name="QuestClear-icon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); -unity-background-scale-mode: scale-to-fit; width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Demo/Demo_Icon/Icon_ImageIcon_ClearStamp_l.png?fileID=21300000&amp;guid=b52e36637f421420e94dcb0d4b1059fe&amp;type=3#Icon_ImageIcon_ClearStamp_l&apos;);" />
         </ui:VisualElement>
     </ui:VisualElement>

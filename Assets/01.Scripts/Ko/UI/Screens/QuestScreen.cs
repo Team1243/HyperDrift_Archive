@@ -30,7 +30,7 @@ public class QuestScreen : MenuScreen
     {
         HeartSystem.onChangeHeartCnt += Quest_ChangeHeartLabel;
         CoinSystem.onChangeCoinCnt += Quest_ChangeCoinLabel;
-        //UpdateeQuestUI();
+        UpdateQuestUI();
     }
 
     protected override void SetVisualElements()
@@ -42,15 +42,15 @@ public class QuestScreen : MenuScreen
         m_questListVisualElement = m_Root.Q<VisualElement>(k_questListVisualElement);
     }
 
-    public void UpdateeQuestUI()
+    public void UpdateQuestUI()
     {
         _questUIs.Clear();
         m_questListVisualElement.Clear();
 
         foreach (var quest in _questInfoList.QuestList)
         {
-            if (quest.IsRecieveReward)
-                return;
+            if (quest.IsDeactivate) continue;
+
             TemplateContainer template = _questVisual.Instantiate();
             template.AddToClassList(c_quest);
             m_questListVisualElement.Add(template);

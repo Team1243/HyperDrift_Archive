@@ -38,6 +38,9 @@ public class QuestUI
     //VisualElement
     private VisualElement m_QuestClearContainer;
 
+    // Event
+    public static event Action<RewardInfo> OnRecieveReward;
+
     private Quest m_Quest;
     private VisualElement m_Root;
 
@@ -75,16 +78,21 @@ public class QuestUI
 
     private void OnRewardReceiveButton(ClickEvent evt)
     {
-        if (!m_Quest.IsRecieveReward || IsRecieved)
+        if (!m_Quest.IsComplete)
             return;
+        Debug.Log("Button Pressed");
+
+        //m_QuestClearContainer.AddToClassList(c_QuestClear);
 
         IsRecieved = true;
         m_QuestLabel.text = "퀘스트 완료!";
         m_QuestDescription.text = "퀘스트를 완료하였습니다!";
         m_QuestReward.text = "0";
+
+        OnRecieveReward?.Invoke(m_Quest.RewardInfo);
+        m_Quest.State = QuestState.Deactivate;
+
         m_QuestClearContainer.RemoveFromClassList(c_QuestClear);
-        m_Quest.JobInit(); //JobInit();
-        UnityEngine.Object.FindObjectOfType<QuestScreen>().UpdateeQuestUI();
     }
 
     /// <summary>
@@ -93,11 +101,16 @@ public class QuestUI
     /// <param name="evt"></param>
     public void UpdateRewardState()
     {
-        m_QuestReward.text = m_Quest.GetRewardInfo().RewardAmount.ToString();
+        m_QuestReward.text = m_Quest.RewardInfo.RewardAmount.ToString();
 
         m_ProgressBar.highValue = m_Quest.GetCompleteProgressValue;
         m_ProgressBar.value = m_Quest.GetCurrentProgress;
         m_ProgressBar.title = $"{m_Quest.GetCurrentProgress} / {m_Quest.GetCompleteProgressValue}";
+
+        Debug.Log($"{m_Quest.DisplayName}'s state : " + m_Quest.State);
+
+        if (m_Quest.IsDeactivate)
+            m_QuestClearContainer.RemoveFromClassList(c_QuestClear);
 
         if (m_Quest.IsComplete)
             m_RewardButton.RemoveFromClassList("off");

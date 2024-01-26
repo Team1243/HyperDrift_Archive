@@ -12,6 +12,8 @@ public class title : MonoBehaviour
     private readonly string Mixer_SFX = "SFXVolume";
     private void Awake()
     {
+        Application.targetFrameRate = 300;
+
             PlayerPrefs.SetFloat(Mixer_Master, 1);
             PlayerPrefs.SetFloat(Mixer_Music, 1);
             PlayerPrefs.SetFloat(Mixer_SFX, 1);

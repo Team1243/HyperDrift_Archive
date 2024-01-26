@@ -1,13 +1,16 @@
 using UnityEngine;
+using System;
 
 public enum QuestState
 {
-    // 순서대로 등록만, 진행 중, 완료
-    Registered,
+    // 순서대로 등록만, 진행 중, 완료, 비활성화 (보상까지 다 받았을 때)
+    Registered = 0,
     Running,    
     Complete,
+    Deactivate
 }
 
+[Serializable]
 [CreateAssetMenu(fileName = "QeustSO", menuName = "SO/Quest/QeustSO")]
 public class Quest : ScriptableObject
 {
@@ -60,16 +63,21 @@ public class Quest : ScriptableObject
     // Quest 상태
     #region Quest State
 
-    private QuestState state = QuestState.Registered;
+    private QuestState state = QuestState.Running;
     public QuestState State
     {
         get => state;
-        set => state = value;
+        set
+        {
+            state = value;
+            Save();
+        }
     }
     
     public bool IsRegistered => state == QuestState.Registered;
     public bool IsRunning => state == QuestState.Running;
     public bool IsComplete => state == QuestState.Complete;
+    public bool IsDeactivate => state == QuestState.Deactivate;
 
     #endregion
 
@@ -84,8 +92,8 @@ public class Quest : ScriptableObject
 
     // Quest 보상 정보
     private RewardInfo rewardInfo;
+    public RewardInfo RewardInfo => rewardInfo;
     public void SetRewardInfo(RewardInfo info) => rewardInfo = info;
-    public RewardInfo GetRewardInfo() => rewardInfo;
     public bool IsRecieveReward => rewardInfo.isRecieve;
 
     #endregion
@@ -99,18 +107,20 @@ public class Quest : ScriptableObject
     // 등록하고 나서 퀘스트를 활성화하는 함수
     public void OnRunning()
     {
-        state = QuestState.Running;
+        if (IsComplete || IsDeactivate) return;
+
+        State = QuestState.Running;
         job.Setup(this);
 
         onChangedProgress?.Invoke(); // UI Update
 
-        Debug.Log("Quest Running !!!");
+        // Debug.Log("Quest Running !!!");
     }
 
     // 퀘스트의 완료조건을 충족하였을 때 실행시켜주는 함수
     public void OnComplete()
     {
-        state = QuestState.Complete;
+        State = QuestState.Complete;
         job.OnComplete();
         
         onQeustCompleted?.Invoke();  // complete event
@@ -134,9 +144,43 @@ public class Quest : ScriptableObject
     }
 
     // 작업 초기화 (퀘스트가 완료되고 보상까지 받았을 때 실행)
-    public void JobInit()
+    public void Reset()
     {
+        state = QuestState.Registered;
+        PlayerPrefs.DeleteKey(id);
         job.Init();
+    }
+
+    #endregion
+
+    #region save
+
+    private void OnEnable()
+    {
+        if (PlayerPrefs.HasKey(id))
+        {
+            Load();
+        }
+        else
+        {
+            Save();
+        }
+    }
+
+    public void Save()
+    {
+        int stateNum = (int)state;
+        PlayerPrefs.SetInt(id, stateNum);
+
+        // Debug.Log("save : " + state);
+    }
+
+    public void Load()
+    {
+        int stateNum = PlayerPrefs.GetInt(id);
+        state = (QuestState)stateNum;
+        
+        //Debug.Log("load : " + state);
     }
 
     #endregion

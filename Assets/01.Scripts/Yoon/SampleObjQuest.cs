@@ -32,7 +32,7 @@ public class SampleObjQuest : MonoBehaviour
     [ContextMenu("INIT")]
     public void Test2()
     {
-        quest.JobInit();
+        quest.Reset();
     }
 
     public bool Condition()

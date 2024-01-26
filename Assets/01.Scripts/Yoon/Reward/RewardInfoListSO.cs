@@ -11,6 +11,14 @@ public class RewardInfoListSO : ScriptableObject
         RewardInfoList.Add(rewardInfo);
     }
 
+    public void ResetInfoData()
+    {
+        foreach (RewardInfo info in RewardInfoList)
+        {
+            info.isRecieve = false;
+        }
+    }
+
     public void ResetList()
     {
         RewardInfoList.Clear();

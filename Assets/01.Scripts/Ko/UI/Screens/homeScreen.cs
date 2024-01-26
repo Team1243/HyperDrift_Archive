@@ -39,6 +39,7 @@ public class homeScreen : MenuScreen
     private readonly string k_SettingExitPanelButton = "Setting_exit-Button";
     private readonly string k_BattleButton = "battle-button";
     private readonly string k_DailyBonusButton = "DailyBonus-Button";
+    private readonly string k_AddHeartButton = "AddHeart-Button";
 
 
     //VisualElements Name
@@ -71,6 +72,7 @@ public class homeScreen : MenuScreen
     private Button m_SettingExitPanelButton;
     private Button m_BattleButton;
     private Button m_DailyBonusButton;
+    private Button m_AddHeartButton;
 
     //Label
     private Label m_heartStateLabel;
@@ -86,6 +88,7 @@ public class homeScreen : MenuScreen
     {
         ChangeStage(Way.None);
         m_PopupHeartContainer.RemoveFromClassList(c_popupHeartShow);
+        _heartSystem = FindObjectOfType<HeartSystem>();
         HeartSystem.onChangeHeartCnt += ChangeHeartLabel;
         CoinSystem.onChangeCoinCnt += ChangeCoinLabel;
     }
@@ -116,7 +119,8 @@ public class homeScreen : MenuScreen
         m_PopupHeartLabel = m_Root.Q<Label>(k_PopupHeartLabel);
 
         m_DailyBonusButton = m_Root.Q<Button>(k_DailyBonusButton);
-        
+
+        m_AddHeartButton = m_Root.Q<Button>(k_AddHeartButton);
     }
 
     protected override void RegisterButtonCallbacks()
@@ -131,18 +135,6 @@ public class homeScreen : MenuScreen
         m_StageRightButton.RegisterCallback<ClickEvent>(evt => ChangeStage(Way.right));
 
         m_DailyBonusButton.RegisterCallback<ClickEvent>(evt => _dailyBonusPopup.ShowScreenRoutine());
-
-        if (!PlayerPrefs.HasKey(Mixer_Master))
-            PlayerPrefs.SetFloat(Mixer_Master, 1);
-        if (!PlayerPrefs.HasKey(Mixer_Music))
-            PlayerPrefs.SetFloat(Mixer_Music, 1);
-        if (!PlayerPrefs.HasKey(Mixer_SFX))
-            PlayerPrefs.SetFloat(Mixer_SFX, 1);
-
-        m_MasterVolumeSlider.value = PlayerPrefs.GetFloat(Mixer_Master);
-        m_MusicVolumeSlider.value = PlayerPrefs.GetFloat(Mixer_Music);
-        m_SFXVolumeSlider.value = PlayerPrefs.GetFloat(Mixer_SFX);
-
 
         m_MasterVolumeSlider.RegisterValueChangedCallback(evt =>
         {
@@ -165,6 +157,28 @@ public class homeScreen : MenuScreen
             _audioMixer.SetFloat(Mixer_SFX, MathF.Log10(volume) * 20);
             PlayerPrefs.SetFloat(Mixer_SFX, volume);
         });
+
+        m_AddHeartButton.RegisterCallback<ClickEvent>(evt =>
+        {
+            _heartSystem.ToMaxHeart();
+        });
+
+        if (!PlayerPrefs.HasKey(Mixer_Master))
+            PlayerPrefs.SetFloat(Mixer_Master, 0.5f);
+        if (!PlayerPrefs.HasKey(Mixer_Music))
+            PlayerPrefs.SetFloat(Mixer_Music, 0.5f);
+        if (!PlayerPrefs.HasKey(Mixer_SFX))
+            PlayerPrefs.SetFloat(Mixer_SFX, 0.5f);
+
+        StartCoroutine(InitSound());
+    }
+
+    private IEnumerator InitSound()
+    {
+        yield return new WaitForSeconds(0.1f);
+        m_MasterVolumeSlider.value = PlayerPrefs.GetFloat(Mixer_Master);
+        m_MusicVolumeSlider.value = PlayerPrefs.GetFloat(Mixer_Music);
+        m_SFXVolumeSlider.value = PlayerPrefs.GetFloat(Mixer_SFX);
     }
 
     private void ChangeStage(Way way)
@@ -179,28 +193,30 @@ public class homeScreen : MenuScreen
         m_StageIamage.style.backgroundImage = new StyleBackground(_curMap.mapImage);
     }
 
+    bool isOnHearPopup = false;
     private void GameStartButton(ClickEvent evt)
     {
         
         if (!_heartSystem.IsHeartExist) 
         {
-            Debug.Log("스타트!하트 부족");
-
-            StartCoroutine(ShowHeartPopup("하트가 부족합니다."));
+            if(!isOnHearPopup)
+                StartCoroutine(ShowHeartPopup("하트가 부족합니다."));
             return;
         }
         Debug.Log("스타트!");
-        _heartSystem = FindObjectOfType<HeartSystem>();
+        
         _heartSystem.UseHeart();
         SceneManager.LoadScene(_curMap.mapSceneName);
     }
 
     private IEnumerator ShowHeartPopup(string text)
     {
+        isOnHearPopup = true;
         m_PopupHeartContainer.AddToClassList(c_popupHeartShow);
         m_PopupHeartLabel.text = text;
         yield return new WaitForSeconds(1.2f);
         m_PopupHeartContainer.RemoveFromClassList(c_popupHeartShow);
+        isOnHearPopup = false;
     }
 
     private void ChangeHeartLabel(int cnt)

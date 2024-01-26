@@ -1,3 +1,4 @@
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class DailyAttendanceSystem : MonoBehaviour
@@ -22,26 +23,44 @@ public class DailyAttendanceSystem : MonoBehaviour
 
     private void Awake()
     {
+        // 초기화
+        // PlayerPrefs.DeleteAll();
         // InitRewardDataAWeek();
-        // UpdateDailyReward();
-    }
 
-    private void OnEnable()
-    {
-        nowDayPassed = PlayerPrefs.GetInt(saveKey);
-        // Debug.LogError(nowDayPassed);
-
+        LoadDayData();
+        
         RealDailyTimeSystem.OnDayHasPassed += UpdateDailyReward;
         DailyBonusPopup.OnUpdateInfo += OnRecieveReward;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        SaveDayData();
+        LoadDayData();
     }
 
     private void OnDisable()
     {
+        SaveDayData();
+    }
+
+    public void SaveDayData()
+    {
         PlayerPrefs.SetInt(saveKey, nowDayPassed);
         PlayerPrefs.Save();
+    }
 
-        RealDailyTimeSystem.OnDayHasPassed -= UpdateDailyReward;
-        DailyBonusPopup.OnUpdateInfo -= OnRecieveReward;
+    public void LoadDayData()
+    {
+        if (PlayerPrefs.HasKey(saveKey))
+        {
+            nowDayPassed = PlayerPrefs.GetInt(saveKey);
+        }
+        else
+        {
+            SaveDayData();
+        }
     }
 
     private void DayRecieveRewardCheck(int day)
@@ -56,19 +75,11 @@ public class DailyAttendanceSystem : MonoBehaviour
 
     private void OnRecieveReward()
     {
-        // if (nowDayPassed < 7)
-        // {
-        //     // Debug.LogError(NowDayPassed);
-        //     nowDayPassed++;
-        // }
         DayRecieveRewardCheck(nowDayPassed);
     }
 
-    [ContextMenu("test")]
     private void UpdateDailyReward()
     {
-        Debug.LogError("UpdateDailyReward");
-
         // 7일차까지 모두 보상을 받았다면
         if (IsAWeekDone())
         {
@@ -79,36 +90,15 @@ public class DailyAttendanceSystem : MonoBehaviour
         if (nowDayPassed < 6 && IsDayRecieveReward(nowDayPassed))
         {
             nowDayPassed++;
-            Debug.LogError("UpdateDailyReward" + NowDayPassed);
+            Debug.Log("UpdateDailyReward NowDayPassed : " + NowDayPassed);
         }
     }
 
     private void InitRewardDataAWeek()
     {
-        // RewardInfoList에 데이터 비워주기
-        dailyRewardInfoListSO.ResetList();
-
-        // RewardInfoList에 데이터 넣어주기
-        for (int i = 1; i < 8; i++)
-        {
-            RewardInfo rewardInfo = new RewardInfo();
-            
-            if (i % 2 == 0)
-            {
-                rewardInfo.RewardType = RewardType.Heart;
-                rewardInfo.RewardAmount = i * 2;
-            }
-            else
-            {
-                rewardInfo.RewardType = RewardType.Coin;
-                rewardInfo.RewardAmount = i * 1000;
-            }
-
-            dailyRewardInfoListSO.AddRewardInfo(rewardInfo);
-        }
-
+        dailyRewardInfoListSO.ResetInfoData();
         nowDayPassed = 0;
         PlayerPrefs.DeleteKey(saveKey);
+        SaveDayData();
     }
-
 }

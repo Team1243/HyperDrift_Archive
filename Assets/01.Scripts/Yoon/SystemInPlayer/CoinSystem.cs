@@ -29,7 +29,7 @@ public class CoinSystem : MonoBehaviour
         if (PlayerPrefs.HasKey(saveKey))
         {
             coinCount = PlayerPrefs.GetInt(saveKey);
-            Debug.Log("<LoadData> " + coinCount);
+            // Debug.Log("<LoadData> " + coinCount);
         }
         else
         {
@@ -42,7 +42,7 @@ public class CoinSystem : MonoBehaviour
     {
         PlayerPrefs.SetInt(saveKey, coinCount);
         PlayerPrefs.Save();
-        Debug.Log("<SaveData> " + coinCount);
+        // Debug.Log("<SaveData> " + coinCount);
     }
 
     #endregion

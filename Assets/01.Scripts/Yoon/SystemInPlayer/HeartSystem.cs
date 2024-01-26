@@ -18,8 +18,6 @@ public class HeartSystem : MonoBehaviour
 
     private void Start()
     {
-        // PlayerPrefs.DeleteAll();
-
         heartSystemData = new HeartSystemData();
         LoadLastData();
 
@@ -137,7 +135,7 @@ public class HeartSystem : MonoBehaviour
 
         if (heartSystemData.IsHeartMax)
         {
-            Debug.Log("Heart is max");
+            // Debug.Log("Heart is max");
 
             if (heartGenerateCor != null)
             {
@@ -155,7 +153,6 @@ public class HeartSystem : MonoBehaviour
         if (cor == null)
         {
             heartSystemData.LastGenerateTime = DateTime.Now;
-            FindObjectOfType<PlayerQuestCheck>().CarController = FindObjectOfType<CarController>();
             heartGenerateCor = StartCoroutine(HeartGeneratingLoop());
         }
     }

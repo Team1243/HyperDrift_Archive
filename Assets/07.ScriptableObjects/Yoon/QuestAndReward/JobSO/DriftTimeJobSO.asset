@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: "\uB4DC\uB9AC\uD504\uD2B8 \uD0C0\uC784"
   description: "3\uD68C \uB2EC\uC131"
-  action: {fileID: 11400000, guid: d55a65d87be01dc48afa250171ccc5ee, type: 2}
   goalProgressValue: 3
+  saveKey: driftTime

@@ -15,5 +15,5 @@ MonoBehaviour:
   id: DriftTime
   displayName: "\uC5B4\uBA54\uC774\uC9D5 \uB4DC\uB9AC\uD504\uD2B8"
   description: "\uD55C \uAC8C\uC784\uC5D0\uC11C \uCD1D \uB4DC\uB9AC\uD504\uD2B8 \uC2DC\uAC04\uC744
-    60\uCD08 \uC774\uC0C1 3\uD68C \uB2EC\uC131\uD558\uC138\uC694."
+    7\uCD08 \uC774\uC0C1 3\uD68C \uB2EC\uC131\uD558\uC138\uC694."
   job: {fileID: 11400000, guid: 5aea6d29ee3e2c84381cb3a32136bef7, type: 2}

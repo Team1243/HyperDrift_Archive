@@ -96,6 +96,7 @@ public class DailyBonusPopup : PopupPanel
         foreach (var reward in RewardInfoList.Select((value, index) => (value, index)))
         {
             // Debug.Log($"리워드 생성됨 index : {reward.index}  value : {reward.value}");
+            
             TemplateContainer template = _dailyRewardUI.Instantiate();
             m_BonusContainer.Add(template);
 

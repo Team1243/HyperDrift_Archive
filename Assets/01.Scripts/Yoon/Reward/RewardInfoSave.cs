@@ -1,46 +1,11 @@
-using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
+using System;
 
 public class RewardInfoSave : MonoBehaviour
 {
-    private static RewardInfoSave _instance;
-    public static RewardInfoSave Intance => _instance;
-
     [SerializeField] private RewardInfoListSO reardInfoList;
-    private string _savePath;
 
-    private List<string> tempRewardInfoList = new List<string>();
-
-    private bool isLoaded = false;
-    public bool IsLoaded => isLoaded;
-
-    private void Awake()
-    {
-        _instance = this;
-        
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            _savePath = Application.dataPath + "/SaveData/";
-        }
-        else
-        {
-            _savePath = Application.persistentDataPath + "/SaveData/";
-        }
-
-        if (!Directory.Exists(_savePath))
-        {
-            Directory.CreateDirectory(_savePath);
-        }
-
-        foreach (var rewardInfo in reardInfoList.RewardInfoList)
-        {
-            string json = JsonUtility.ToJson(rewardInfo);
-            tempRewardInfoList.Add(json);
-        }
-
-        Load();
-    }
+    private string saveKey = "rewardInfo";
 
     private void OnEnable()
     {
@@ -54,25 +19,41 @@ public class RewardInfoSave : MonoBehaviour
 
     public void Save()
     {
-        string finalJson = JsonUtility.ToJson(tempRewardInfoList);
-        File.WriteAllText(_savePath + "RewardInfoList.json", finalJson);
+        string saveData = "0";
+        int num = 0;
+        foreach (var info in reardInfoList.RewardInfoList)
+        {
+            num = Convert.ToInt32(info.isRecieve);
+            saveData += " " + num;
+        }
+
+        PlayerPrefs.SetString(saveKey, saveData);
+        PlayerPrefs.Save();
     }
 
     public void Load()
     {
-        if (File.Exists(_savePath + "RewardInfoList.json"))
+        if (PlayerPrefs.HasKey(saveKey))
         {
-            string json = File.ReadAllText(_savePath + "RewardInfoList.json");
+            string loadData = PlayerPrefs.GetString(saveKey);
+            string[] booleanList = loadData.Split(' ');
 
-            tempRewardInfoList = JsonUtility.FromJson<List<string>>(json);
-
-            foreach (var r in tempRewardInfoList)
+            for (int i = 1; i < booleanList.Length; i++)
             {
-                RewardInfo rewardInfo = JsonUtility.FromJson<RewardInfo>(r);
-                reardInfoList.RewardInfoList.Add(rewardInfo);
+                int num = Convert.ToInt32(booleanList[i]);
+                if (num == 1)
+                {
+                    reardInfoList.RewardInfoList[i - 1].isRecieve = true;
+                }
+                else
+                {
+                    reardInfoList.RewardInfoList[i - 1].isRecieve = false;
+                }
             }
-
-            isLoaded = true;
+        }
+        else
+        {
+            Save();
         }
     }
 }

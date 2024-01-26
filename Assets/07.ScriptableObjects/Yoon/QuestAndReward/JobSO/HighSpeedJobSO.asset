@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: "\uCD5C\uACE0 \uC18D\uB3C4"
   description: "5\uD68C \uB2EC\uC131"
-  action: {fileID: 11400000, guid: d55a65d87be01dc48afa250171ccc5ee, type: 2}
   goalProgressValue: 5
+  saveKey: highSpeed

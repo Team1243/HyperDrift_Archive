@@ -30,15 +30,15 @@ public class ItemSpawner : MonoBehaviour
 	{
 		if (roadCount < 1) return;
 
-		bool fuelCreated = CreateFuel(road);
-		if (!fuelCreated)
-		{
+		//bool fuelCreated = CreateFuel(road);
+		//if (!fuelCreated)
+		//{
 			float percentage = UnityEngine.Random.Range(0, 1f);
 			if (percentage <= obstacleSpawnRatio)
 			{
 				CreateObstacle(road);
 			}
-		}
+		//}
 
 		if (itemQueue.Count > 0)
 		{

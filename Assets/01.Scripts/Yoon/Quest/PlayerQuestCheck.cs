@@ -1,4 +1,3 @@
-using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 
 public class PlayerQuestCheck : MonoBehaviour
@@ -26,12 +25,6 @@ public class PlayerQuestCheck : MonoBehaviour
     [SerializeField] private float highSpeedGoalValue;
     [SerializeField] private int highSpeedRewardAmount;
 
-    private void Awake()
-    {
-        // _carController = player.GetComponent<CarController>();
-        _carController = FindObjectOfType<CarController>();
-    }
-
     private void Start()
     {
         driftTimeQuest.OnRunning();
@@ -45,6 +38,8 @@ public class PlayerQuestCheck : MonoBehaviour
         highSpeedQuest.OnRunning();
         RewardInfo rewardInfoC = new RewardInfo(RewardType.Coin, highSpeedRewardAmount);
         highSpeedQuest.SetRewardInfo(rewardInfoC);
+
+        FindObjectOfType<QuestScreen>().UpdateQuestUI();
     }
 
     // GameOver일 때 해당 함수 실행
@@ -60,9 +55,11 @@ public class PlayerQuestCheck : MonoBehaviour
     [ContextMenu("Init")]
     public void AllQuestJobInit()
     {
-        driftTimeQuest.JobInit();
-        moveDistanceQuest.JobInit();
-        highSpeedQuest.JobInit();
+        driftTimeQuest.Reset();
+        moveDistanceQuest.Reset();
+        highSpeedQuest.Reset();
+
+        FindObjectOfType<QuestScreen>().UpdateQuestUI();
     }
 
     #region Conditions

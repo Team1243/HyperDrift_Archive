@@ -81,7 +81,7 @@ public class MenuBar : MenuScreen
         if (_homeScreen.isSettingPanelShow) return;
         isMoving = true;
 
-        Debug.Log($"현재활성화된 화면{_buutton.ToString()}");
+        // Debug.Log($"현재활성화된 화면{_buutton.ToString()}");
         _currentScreen = _buutton;
 
         m_ScreenGrouupVisualElement.style.translate = new Translate(Length.Percent((int)_buutton), 0);

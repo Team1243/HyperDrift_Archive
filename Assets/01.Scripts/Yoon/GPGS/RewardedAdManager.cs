@@ -1,4 +1,4 @@
-using System.Net.NetworkInformation;
+/*using System.Net.NetworkInformation;
 using GoogleMobileAds.Api;
 using UnityEngine;
 using System;
@@ -28,11 +28,6 @@ public class RewardedAdManager : MonoBehaviour
 
     private void Start()
     {
-        if (IsNetworkAvailable())
-        {
-            Debug.Log(IsNetworkAvailable());
-        }
-
         onUserEarnedRewardAction += () => Debug.Log("Player successfull watching");
 
         LoadAd();
@@ -93,3 +88,4 @@ public class RewardedAdManager : MonoBehaviour
         return NetworkInterface.GetIsNetworkAvailable();
     }
 }
+*/

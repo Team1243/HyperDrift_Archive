@@ -13,24 +13,31 @@ MonoBehaviour:
   m_Name: RewardInfoDataList
   m_EditorClassIdentifier: 
   RewardInfoList:
-  - RewardType: 2
+  - ID: 0
+    RewardType: 2
     RewardAmount: 1000
-    isRecieve: 0
-  - RewardType: 1
+    isRecieve: 1
+  - ID: 1
+    RewardType: 1
     RewardAmount: 4
     isRecieve: 0
-  - RewardType: 2
+  - ID: 2
+    RewardType: 2
     RewardAmount: 3000
     isRecieve: 0
-  - RewardType: 1
+  - ID: 3
+    RewardType: 1
     RewardAmount: 8
     isRecieve: 0
-  - RewardType: 2
+  - ID: 4
+    RewardType: 2
     RewardAmount: 5000
     isRecieve: 0
-  - RewardType: 1
+  - ID: 5
+    RewardType: 1
     RewardAmount: 12
     isRecieve: 0
-  - RewardType: 2
+  - ID: 6
+    RewardType: 2
     RewardAmount: 7000
     isRecieve: 0

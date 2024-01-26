@@ -13,10 +13,10 @@ public class CarController : MonoBehaviour
     [Header("Car")] 
     [HideInInspector] public bool IsInitEnd = false;
     [HideInInspector] public Transform CarVisual;
-    [HideInInspector] public float HighSpeed = 0;
+    [HideInInspector] public float HighSpeed = 0; // 퀘스트에 사용
     private float _carPositionY = 0;
     private float _currentSpeed;
-    public float CurrentSpeed // 퀘스트에 사용
+    public float CurrentSpeed 
     {
         set
         {
@@ -64,14 +64,13 @@ public class CarController : MonoBehaviour
         _sphereCollider = GetComponent<SphereCollider>();
         _rigidbody = GetComponent<Rigidbody>();
         _carMovement = GetComponent<CarMovement>();
-        _playerQuestCheck = GetComponentInChildren<PlayerQuestCheck>();
+        // _playerQuestCheck = GetComponentInChildren<PlayerQuestCheck>();
         _arrow = FindObjectOfType<PlayerDirectionUI>().gameObject;
     }
 
     private void Start()
     {
         if (_isHome) return;
-        RewardedAdManager.Instance.onUserEarnedRewardAction += GameRestart;
         _lastPos = transform.position;
         StartCoroutine(CarInitCo());
     }
@@ -83,6 +82,11 @@ public class CarController : MonoBehaviour
         MoveDistanceCheck();
         /*if (IsInitEnd)
             transform.position = new Vector3(transform.position.x, _carPositionY, transform.position.z);*/
+    }
+
+    private void OnEnable()
+    {
+        _playerQuestCheck = GameObject.Find("QuestCheck").GetComponent<PlayerQuestCheck>();  
     }
 
     private IEnumerator CarInitCo()
@@ -164,10 +168,11 @@ public class CarController : MonoBehaviour
         IsInitEnd = false;
         _arrow.SetActive(false);
         Debug.Log("GameOver");
-        //_playerQuestCheck.AllQuestJobInit();
 
-        //if (_playerQuestCheck.CarController is null)
-            //_playerQuestCheck.CarController = this;
+        if (_playerQuestCheck.CarController is null)
+            _playerQuestCheck.CarController = this;
+        
+        _playerQuestCheck.AllQuestJobAct();
     }
 
     /// <summary>

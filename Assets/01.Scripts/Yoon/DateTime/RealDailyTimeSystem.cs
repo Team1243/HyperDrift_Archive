@@ -16,10 +16,10 @@ public class RealDailyTimeSystem : MonoBehaviour
 
     [SerializeField] private float checkDelayTime = 60f;
 
-    private void OnEnable()
+    private void Start()
     {
         // 데이터 초기화
-        // PlayerPrefs.DeleteAll();
+        // PlayerPrefs.DeleteKey(saveKey);
         // LoadLastData();
         // SaveNowData();
 
@@ -29,17 +29,11 @@ public class RealDailyTimeSystem : MonoBehaviour
         // 최소 하루가 지났다면
         if (IsNewDay())
         {
-            Debug.Log("passed");
-            DateDebug();
-
             SaveNowData();
             OnDayHasPassed?.Invoke();
         }
         else
         {
-            Debug.Log("not passed");
-            DateDebug();
-
             // 경과 시간 구하기
             GetPassedTimeUntillNow(lastDateTime, out passedTime);
 
@@ -83,7 +77,6 @@ public class RealDailyTimeSystem : MonoBehaviour
         }
         else
         {
-            Debug.Log("have not savekey");
             SaveNowData();
         }
     }
@@ -114,20 +107,16 @@ public class RealDailyTimeSystem : MonoBehaviour
     private bool IsNewDay()
     {
         // 경과 시간 구하기
-        // GetPassedTimeUntillNow(lastDateTime, out passedTime);
-        // Debug.Log(passedTime);
-        // 
-        // if (passedTime >= TimeSpan.FromMinutes(2))
-        // {
-        //     return true;
-        //     // StartCoroutine(DateCheckLoop());
-        // }
-        // else
-        // {
-        //     return false;
-        // }
+        GetPassedTimeUntillNow(lastDateTime, out passedTime);
 
-        return DateTime.Now.Date > lastDateTime.Date;
+        if (passedTime >= TimeSpan.FromHours(24))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     #endregion

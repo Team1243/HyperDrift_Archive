@@ -11,11 +11,11 @@ public class DailyQuestSystem : MonoBehaviour
 
     private void OnEnable()
     {
-        RealDailyTimeSystem.OnDayHasPassed += _playerQuestCheck.AllQuestJobAct;
+        RealDailyTimeSystem.OnDayHasPassed += _playerQuestCheck.AllQuestJobInit;
     }
 
     private void OnDisable()
     {
-        RealDailyTimeSystem.OnDayHasPassed -= _playerQuestCheck.AllQuestJobAct;
+        RealDailyTimeSystem.OnDayHasPassed -= _playerQuestCheck.AllQuestJobInit;
     }
 }

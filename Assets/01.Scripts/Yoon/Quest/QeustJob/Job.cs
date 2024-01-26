@@ -1,5 +1,8 @@
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
+[Serializable]
 [CreateAssetMenu(fileName = "JobSO", menuName = "SO/Quest/JobSO")]
 public class Job : ScriptableObject
 {
@@ -13,7 +16,7 @@ public class Job : ScriptableObject
     [SerializeField] [TextArea(3, 5)] private string description;
 
     // 액션 (작업 로직)
-    [SerializeField] private JobAction action;
+    // [SerializeField] private JobAction action;
 
     // 타겟 (작업의 대상) 아직까지 필요하지 않음. 나중에 필요하면 구현하도록 하자.
 
@@ -46,7 +49,7 @@ public class Job : ScriptableObject
         }
     }
 
-    private string saveKey = "CurrentProgressValue";
+    [SerializeField] private string saveKey = "CurrentProgressValue";
 
     // 이벤트
     public delegate void OnJobCompleted();
@@ -68,9 +71,24 @@ public class Job : ScriptableObject
     {
         if (isComplete) return;
 
-        CurrentProgressValue = action.Run(condition, CurrentProgressValue);
-        // Debug.Log("update: " + currentProgressValue);
-        Owner.RecieveReport(CurrentProgressValue);
+        if (Owner.IsRunning)
+        {
+            CurrentProgressValue = Run(condition, CurrentProgressValue);
+            Debug.Log("update: " + currentProgressValue);
+            Owner.RecieveReport(CurrentProgressValue);
+        }
+    }
+
+    public int Run(bool condition, int currentProgress)
+    {
+        if (condition)
+        {
+            return ++currentProgress;
+        }
+        else
+        {
+            return currentProgress;
+        }
     }
 
     // 완료했을 때
@@ -92,6 +110,33 @@ public class Job : ScriptableObject
 
     private void OnEnable()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        Load();
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Save();
+        Load();
+    }
+
+    private void OnDisable()
+    {
+        Save();
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    public void Save()
+    {
+        // Debug.Log("save: " + currentProgressValue);
+        PlayerPrefs.SetInt(saveKey, currentProgressValue);
+        PlayerPrefs.Save();
+    }
+
+    public void Load()
+    {
         if (PlayerPrefs.HasKey(saveKey))
         {
             currentProgressValue = PlayerPrefs.GetInt(saveKey);
@@ -99,17 +144,10 @@ public class Job : ScriptableObject
         }
         else
         {
-            // Debug.Log("save: " + currentProgressValue);
+            currentProgressValue = 0;
             PlayerPrefs.SetInt(saveKey, currentProgressValue);
             PlayerPrefs.Save();
         }
-    }
-
-    private void OnDisable()
-    {
-        // Debug.Log("save: " + currentProgressValue);
-        PlayerPrefs.SetInt(saveKey, currentProgressValue);
-        PlayerPrefs.Save();
     }
 
 }

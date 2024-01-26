@@ -20,7 +20,7 @@
         <ui:VisualElement name="Top-container" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; width: 100%; height: 259px; justify-content: space-around; align-items: center;">
             <ui:VisualElement name="stage-label" style="background-color: rgba(0, 0, 0, 0); flex-shrink: 0; width: 940px; height: 160px; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Label/Label_TitleRibbon_Green.png?fileID=21300000&amp;guid=4f004328d7c9547edae34787869f3e8a&amp;type=3#Label_TitleRibbon_Green&apos;); flex-direction: row; align-items: center; justify-content: space-around; padding-left: 80px; padding-right: 80px; padding-bottom: 27px; padding-top: 9px;">
                 <ui:VisualElement name="map-icon" style="background-color: rgba(0, 0, 0, 0); width: 150px; height: 150px; flex-shrink: 0; -unity-background-scale-mode: scale-to-fit; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Icon_PictoIcons(x2)/256/Pictoicon_Bookmark.Png?fileID=21300000&amp;guid=7409bb81554eb4e829f1392d2adeee2a&amp;type=3#Pictoicon_Bookmark&apos;);" />
-                <ui:Label tabindex="-1" text="퀘스트 모음" display-tooltip-when-elided="true" class="common__text" style="font-size: 82px; -unity-text-align: middle-center;" />
+                <ui:Label tabindex="-1" text="일일 과제" display-tooltip-when-elided="true" class="common__text" style="font-size: 82px; -unity-text-align: middle-center;" />
                 <ui:VisualElement name="map-icon" style="background-color: rgba(0, 0, 0, 0); width: 150px; height: 150px; flex-shrink: 0; -unity-background-scale-mode: scale-to-fit; background-image: url(&apos;project://database/Assets/GUI%20PRO%20Kit%20-%20Casual%20Game/ResourcesData/Sprite/Component/Icon_PictoIcons(x2)/256/Pictoicon_Bookmark.Png?fileID=21300000&amp;guid=7409bb81554eb4e829f1392d2adeee2a&amp;type=3#Pictoicon_Bookmark&apos;);" />
             </ui:VisualElement>
         </ui:VisualElement>
@@ -30,7 +30,7 @@
             <ui:Instance template="QuestContainer" name="QuestContainer" class="QuestContainer" style="display: none;" />
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.64); width: 100%; position: absolute; height: 100%; align-items: center; justify-content: center;">
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.64); width: 100%; position: absolute; height: 100%; align-items: center; justify-content: center; display: none;">
         <ui:VisualElement name="popup_heart-container" class="popupHeart" style="position: relative; bottom: 0; translate: 0 0;">
             <ui:Label tabindex="-1" text="시연용 빌드입니다." display-tooltip-when-elided="true" name="popup_heart-label" class="common__text" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-grow: 1; -unity-font-style: normal;" />
         </ui:VisualElement>

@@ -10,6 +10,7 @@ public enum RewardType
 [Serializable]
 public class RewardInfo
 {
+    public int ID;
     public RewardType RewardType = RewardType.None;
     public int RewardAmount = 0;
     public bool isRecieve = false;
